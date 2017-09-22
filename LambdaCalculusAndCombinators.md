@@ -2,20 +2,20 @@
 
 ## Chapter 1
 
-**Exercise 1.4**
+### Exercise 1.4
 Insert the full number of parentheses and λ's into the following abbreviated λ-terms:
 
-**(a)** xyz(yx),
+**(a)** `xyz(yx)`,
 
-**(b)** λx.uxy,
+**(b)** `λx.uxy`,
 
-**(c)** λu.u(λx.y),
+**(c)** `λu.u(λx.y)`,
 
-**(d)** (λu.vuu)zy,
+**(d)** `(λu.vuu)zy`,
 
-**(e)** ux(yz)(λv.vy),
+**(e)** `ux(yz)(λv.vy)`,
 
-**(f)** (λxyz.xz(yz))uvw.
+**(f)** `(λxyz.xz(yz))uvw`.
 
 **Solutions:**
 
@@ -72,7 +72,7 @@ ux(yz)(λv.vy) ≡
 ((((λx.(λy.(λz.((xz)(yz)))))u)v)w)
 ```
 
-**Exercise 1.8**
+### Exercise 1.8
 
 **(a)** Mark all the occurrences of `xy` in the term `λxy.xy`.
 
