@@ -1,0 +1,59 @@
+== Lambda Calculus and Combinators
+=== Chapter 1
+.*Exercise 1.4*
+Insert the full number of parentheses and λ's into the following abbreviated λ-terms:
+
+[cols="2*"]
+|===
+|*(a)* xyz(yx),
+|*(d)* (λu.vuu)zy,
+|*(b)* λx.uxy,
+|*(e)* ux(yz)(λv.vy),
+|*(c)* λu.u(λx.y),
+|*(f)* (λxyz.xz(yz))uvw.
+|===
+
+*Solution:*
+
+*(a)* +
+xyz(yx) ≡ +
+(xyz)(yx) ≡ +
+((xy)z)(yx) ≡ +
+(((xy)z)(yx))
+
+*(b)* +
+λx.uxy ≡ +
+λx.(uxy) ≡ +
+λx.(uxy) ≡ +
+λx.((ux)y) ≡ +
+(λx.((ux)y))
+
+*(c)* +
+λu.u(λx.y) ≡ +
+λu.(u(λx.y)) ≡ +
+(λu.(u(λx.y)))
+
+*(d)* +
+(λu.vuu)zy ≡ +
+(λu.vuu)zy ≡ +
+(λu.(vuu))zy ≡ +
+(λu.((vu)u))zy ≡ +
+((λu.((vu)u))z)y ≡ +
+(((λu.((vu)u))z)y)
+
+*(e)* +
+ux(yz)(λv.vy) ≡ +
+(ux)(yz)(λv.vy) ≡ +
+((ux)(yz))(λv.vy) ≡ +
+((ux)(yz))(λv.(vy)) ≡ +
+(((ux)(yz))(λv.(vy)))
+
+*(f)* +
+(λxyz.xz(yz))uvw ≡ +
+(λx.(λyz.xz(yz)))uvw ≡ +
+(λx.(λy.(λz.xz(yz))))uvw ≡ +
+(λx.(λy.(λz.(xz)(yz))))uvw ≡ +
+((λx.(λy.(λz.((xz)(yz)))))uvw ≡ +
+(λx.(λy.(λz.((xz)(yz)))))u)vw ≡ +
+(((λx.(λy.(λz.((xz)(yz)))))u)v)w ≡ +
+((((λx.(λy.(λz.((xz)(yz)))))u)v)w)
