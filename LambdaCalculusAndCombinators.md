@@ -104,4 +104,88 @@ x(uv)(λu.v(uv))uv =
 
 **(c)**
 
-No. Because `λu.u = (λu.u)` and `λu.uv = (λu.(uv))`
+No. Because `λu.u = (λu.u)` and `λu.uv = (λu.(uv))`.
+
+### Exercise 1.14
+Evaluate the following substitutions:
+
+**(a)** `[(uv)/x] (λy.x(λw.vwx))`
+
+**(b)** `[(λy.xy)/x] (λy.x(λx.x))`
+
+**(c)** `[(λy.vy)/x] (y (λv.xv))`
+
+**(d)** `[(uv)/x] (λx.zy)`
+
+**Solutions:**
+
+### Exercise 1.28
+Reduce the following terms to β-normal forms:
+
+**(a)** `(λx.xy)(λu.vuu)`,
+
+**(b)** `(λxy.yx)uv`,
+
+**(c)** `(λx.x(x(yz))x)(λu.uv)`,
+
+**(d)** `(λx.xxy)(λy.yz)`,
+
+**(e)** `(λxy.xyy)(λu.uyx)`,
+
+**(f)** `(λxyz.xz(yz))((λxy.yx)u)((λxy.yx)v) w`.
+
+**Solutions:**
+
+### Exercise 1.35
+Do not confuse *being* a β-nf with *having* a β-nf: first prove that
+
+**(a)** `[N/x]M` *is a β-nf* ⇒ *M has a β-nf*
+
+then, in contrast (hrader), find terms `M` and `N` s.t.`[N/x]M` has a β-nf but `M` does not;
+this will prove that
+
+**(b)** `[N/x]M` *has a β-nf* ⇏ *M has a β-nf*
+
+### Exercise 1.36
+(Harder) Find terms `P`, `Q` s.t. neither of `P`, `Q` has a β-nf, but `PQ` has a β-nf.
+
+### Exercise 1.38
+Prove that `(λxyz.xzy)(λxy.x) =β (λxy.x)(λx.x)`
+
+### Exercise 1.42
+**(a)** Prove that if the equation `λxy.x = λxy.y` was added as an extra axiom to the definition of β-equality, then all
+terms would become equal. (Adding an equation `P = Q` as an extra axiom means allowing any occurrence of `P` in a term
+to be replaced by `Q` and vice versa.)
+
+**(b)** Do the same for the equation `λx.x = λxy.yx`.
+
+### Exercise 1.44 (Extra practice)
+**(a)** Insert all missing parentheses and λ’s into the following abbreviated λ-terms:
+- `xx(xxx)x`,
+- `vw(λxy.vx)`,
+- `(λxy.x)uv`,
+- `w(λxyz.xz(yz))uv`.
+
+**(b)** Mark all the occurrences of xy in the following terms:
+- `(λxy.xy)xy`,
+- `(λxy.xy)(xy)`,
+- `λxy.xy(xy)`.
+
+**(c)** Do any of the terms in **(a)** or **(b)** contain any of the following terms as subterms?
+If so, which contains which?
+- `λy.xy`,
+- `y(xy)`,
+- `λxy.x`.
+
+**(d)** Evaluate the following substitutions:
+- `[vw/x] (x(λy.yx))`,
+- `[vw/x] (x(λx.yx))`,
+- `[ux/x] (x(λy.yx))`,
+- `[uy/x] (x(λy.yx))`.
+
+**(e)** Reduce the following terms to β-normal forms:
+- `(λxy.xyy)uv`,
+- `(λxy.yx)(uv)zw`,
+- `(λxy.x)(λu.u)`,
+- `(λxyz.xz(yz))(λuv.u)`.
+
