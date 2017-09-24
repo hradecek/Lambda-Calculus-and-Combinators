@@ -119,6 +119,41 @@ Evaluate the following substitutions:
 
 **Solutions:**
 
+**(a)** 
+```
+[(uv)/x] (λy.x(λw.vwx)) = (1.12f)
+(λy.[(uv)/x] x(λw.vwx)) = (1.12c)
+(λy.[(uv)/x] x [(uv)/x] (λw.vwx)) = (1.12f)
+(λy.[(uv)/x] x(λw.[(uv)/x] vwx)) = (1.12a)
+(λy.(uv)(λw.[(uv)/x] vwx)) = (1.12a)
+(λy.(uv)(λw.vw(uv))) = 
+λy.uv(λw.vw(uv))
+```
+
+**(b)**
+```
+[(λy.xy)/x] (λy.x(λx.x)) = (1.12f)
+(λy.[(λy.xy)/x] x(λx.x)) = (1.12c)
+(λy.[(λy.xy)/x] x [(λy.xy)/x] (λx.x)) = (1.12a)
+(λy.(λy.xy)[(λy.xy)/x] (λx.x)) = (1.12e)
+λy.(λy.xy)(λx.x)
+```
+
+**(c)**
+```
+[(λy.vy)/x] (y (λv.xv)) =(1.12c)
+([(λy.vy)/x] y [(λy.vy)/x] (λv.xv)) = (1.12b)
+(y [(λy.vy)/x] (λv.xv)) = (1.12g)
+(y (λz.[(λy.vy)/x][z/v] xz)) = (1.12a)
+y (λz.(λy.vy)z)
+```
+
+**(d)**
+```
+[(uv)/x] (λx.zy) = (1.12e)
+λx.zy
+```
+
 ### Exercise 1.28
 Reduce the following terms to β-normal forms:
 
