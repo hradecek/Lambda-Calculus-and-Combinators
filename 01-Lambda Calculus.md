@@ -1,6 +1,6 @@
 # Lambda Calculus and Combinators
 
-## Chapter 1
+## Chapter 1 - λ-Calculus
 
 ### Exercise 1.4
 Insert the full number of parentheses and λ's into the following abbreviated λ-terms:
