@@ -99,7 +99,7 @@ x(uv)(λu.v(uv))uv =
 ((x(uv))(λu.(v(uv))))uv =
 (((x(uv))(λu.(v(uv))))u)v =
 ((((x(uv))(λu.(v(uv))))u)v) =
-      ^^         ^^ 
+      ^^         ^^
 ```
 
 **(c)**
@@ -170,6 +170,53 @@ Reduce the following terms to β-normal forms:
 **(f)** `(λxyz.xz(yz))((λxy.yx)u)((λxy.yx)v) w`.
 
 **Solutions:**
+
+**(a)**
+```
+(λx.xy)(λu.vuu) β> [(λu.vuu)/x](xy) =
+(λu.vuu)y β> [y/u](vuu) = vyy
+```
+
+**(b)**
+```
+(λxy.yx)uv β> ([u/x](λy.yx))v =
+(λy.yu)v β> [v/y](yu) =
+vu
+```
+**(c)**
+```
+(λx.x(x(yz))x)(λu.uv) β> [(λu.uv)/x](x(x(yz))x) =
+(λu.uv)((λu.uv)(yz))(λu.uv) β> (λu.uv)([(yz)/u](uv)(λu.uv) =
+(λu.uv)((yz)v)(λu.uv) β> [((yz)v)/u](uv)(λu.uv) =
+((yz)v)v(λu.uv) = yzvv(λu.uv)
+```
+
+**(d)**
+```
+(λx.xxy)(λy.yz) β> [(λy.yz)/x](xxy) =
+(λy.yz)(λy.yz)y β> [(λy.yz)/y](yz)y =
+((λy.yz)z)y β> [(z/y)(yz)]y =
+zzy
+```
+
+**(e)**
+```
+(λxy.xyy)(λu.uyx) β> [(λu.uyx)/x](λy.xyy) = [(λu.uyx)/x](λz.xzz) =
+λz.(λu.uyx)zz β>  λz.([z/u](uyx))z =
+λz.(zyx)z = λz.zyxz
+```
+
+**(f)**
+```
+(λxyz.xz(yz))((λxy.yx)u)((λxy.yx)v) w β> [((λxy.yx)u)/x](λyz.xz(yz))((λxy.yx)v) w =
+(λyz.((λxy.yx)u)z(yz))((λxy.yx)v) w β> (λyz.([u/x](λy.yx))z(yz))((λxy.yx)v) w =
+(λyz.(λy.yu)z(yz))((λxy.yx)v) w β> (λyz.[z/y]yu(yz))((λxy.yx)v) w =
+(λyz.zu(yz))((λxy.yx)v) w β> [((λxy.yx)v)/y](λz.zu(yz)) w =
+(λz.zu(((λxy.yx)v)z)) w β> (λz.zu(([v/x](λy.yx))z)) w =
+(λz.zu((λy.yv)z)) w β> (λz.zu([z/y](yv))) w =
+(λz.zu(zv)) w β> [w/z]zu(zv) =
+wu(wv) = wuwv
+```
 
 ### Exercise 1.35
 Do not confuse *being* a β-nf with *having* a β-nf: first prove that
