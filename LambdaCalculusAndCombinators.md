@@ -228,6 +228,12 @@ this will prove that
 
 **(b)** `[N/x]M` *has a β-nf* ⇏ *M has a β-nf*
 
+**Solutions:**
+
+**(a)**
+
+**(b)**
+
 ### Exercise 1.36
 (Harder) Find terms `P`, `Q` s.t. neither of `P`, `Q` has a β-nf, but `PQ` has a β-nf.
 
@@ -270,4 +276,57 @@ If so, which contains which?
 - `(λxy.yx)(uv)zw`,
 - `(λxy.x)(λu.u)`,
 - `(λxyz.xz(yz))(λuv.u)`.
+
+**Solutions:**
+
+**(a)**
+```
+xx(xxx)x =
+(xx)(xxx)x =
+((xx)(xxx))x =
+((xx)((xx)x))x
+```
+
+```
+vw(λxy.vx) =
+(vw)(λxy.vx) =
+(vw)(λxy.(vx)) =
+(vw)(λx.(λy.(vx)))
+```
+
+```
+(λxy.x)uv =
+(λx.(λy.x))uv =
+((λx.(λy.x))u)v
+```
+
+```
+w(λxyz.xz(yz))uv =
+w(λxyz.(xz)(yz))uv =
+w(λxyz.((xz)(yz)))uv =
+w(λx.(λyz.((xz)(yz))))uv =
+w(λx.(λy.(λz.((xz)(yz)))))uv =
+(w(λx.(λy.(λz.((xz)(yz)))))u)v
+```
+
+**(b)**
+```
+(λxy.xy)xy = ((λx.(λy.(xy)))x)y
+                       ^^
+```
+
+```
+(λxy.xy)(xy) = (λx.(λy.(xy)))(xy)
+                        ^^    ^^
+```
+
+```
+λxy.xy(xy) = (λx(λy.x)y)(xy)
+                         ^^
+```
+
+**(c)**
+- `λy.xy` *first* and *second*
+- `y(xy)` *none*
+- `λxy.x = λx.(λy.x)` *third*
 
