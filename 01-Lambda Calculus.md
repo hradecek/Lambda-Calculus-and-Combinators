@@ -237,8 +237,20 @@ this will prove that
 ### Exercise 1.36
 (Harder) Find terms `P`, `Q` s.t. neither of `P`, `Q` has a β-nf, but `PQ` has a β-nf.
 
+**Solutions:**
+
+**(a)**
+
+**(b)**
+
 ### Exercise 1.38
 Prove that `(λxyz.xzy)(λxy.x) =β (λxy.x)(λx.x)`
+
+**Solutions:**
+
+**(a)**
+
+**(b)**
 
 ### Exercise 1.42
 **(a)** Prove that if the equation `λxy.x = λxy.y` was added as an extra axiom to the definition of β-equality, then all
@@ -246,6 +258,12 @@ terms would become equal. (Adding an equation `P = Q` as an extra axiom means al
 to be replaced by `Q` and vice versa.)
 
 **(b)** Do the same for the equation `λx.x = λxy.yx`.
+
+**Solutions:**
+
+**(a)**
+
+**(b)**
 
 ### Exercise 1.44 (Extra practice)
 **(a)** Insert all missing parentheses and λ’s into the following abbreviated λ-terms:
@@ -330,3 +348,36 @@ w(λx.(λy.(λz.((xz)(yz)))))uv =
 - `y(xy)` *none*
 - `λxy.x = λx.(λy.x)` *third*
 
+**(d)**
+```
+[vw/x] (x(λy.yx))
+```
+
+```
+[vw/x] (x(λx.yx))`
+```
+
+```
+[ux/x] (x(λy.yx))`
+```
+
+```
+[uy/x] (x(λy.yx))`
+```
+
+**(e)**
+```
+(λxy.xyy)uv`
+```
+
+```
+(λxy.yx)(uv)zw`
+```
+
+```
+(λxy.x)(λu.u)`
+```
+
+```
+(λxyz.xz(yz))(λuv.u)`
+```
